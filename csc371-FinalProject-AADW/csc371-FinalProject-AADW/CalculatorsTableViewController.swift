@@ -11,6 +11,7 @@ import UIKit
 class CalculatorsTableViewController: UITableViewController {
     
     let Calculators : [String] = ["Basic Calculator", "Scientific Calculator"]
+    let calcIDS : [String] = ["basic"]
     let Conversions : [String]=[]
 
     override func viewDidLoad() {
@@ -45,7 +46,7 @@ class CalculatorsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Calculators[indexPath.row], for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: calcIDS[indexPath.row], for: indexPath)
 
         // Configure the cell...
         switch(indexPath.section){

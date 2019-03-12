@@ -75,9 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="git-WI-Iqu">
-                                <rect key="frame" x="86" y="355" width="90" height="280.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="git-WI-Iqu">
+                                <rect key="frame" x="142.5" y="193.5" width="90" height="280.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPa-OI-m2u">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
@@ -189,18 +188,18 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="un0-na-QUh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="un0-na-QUh">
                                         <rect key="frame" x="0.0" y="250.5" width="90" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMv-ms-S4a">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMv-ms-S4a">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="number:" destination="svq-Zt-6xL" eventType="touchUpInside" id="eyS-YI-hIO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-ne-00e">
-                                                <rect key="frame" x="30" y="0.0" width="60" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-ne-00e">
+                                                <rect key="frame" x="45" y="0.0" width="45" height="30"/>
                                                 <state key="normal" title="="/>
                                                 <connections>
                                                     <action selector="equals:" destination="svq-Zt-6xL" eventType="touchUpInside" id="M9r-c5-aRz"/>
@@ -212,6 +211,10 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="git-WI-Iqu" firstAttribute="centerY" secondItem="Ho8-ak-14U" secondAttribute="centerY" id="Brh-RZ-0rj"/>
+                            <constraint firstItem="git-WI-Iqu" firstAttribute="centerX" secondItem="Ho8-ak-14U" secondAttribute="centerX" id="YI5-2d-LNH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="syy-sz-BUP"/>
                     </view>
                     <connections>
