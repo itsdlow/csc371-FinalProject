@@ -239,5 +239,20 @@
             </objects>
             <point key="canvasLocation" x="1054" y="-603"/>
         </scene>
+        <!--Scientific Calculator View Controller-->
+        <scene sceneID="2ce-hM-By0">
+            <objects>
+                <viewController id="vM4-NI-qgu" customClass="ScientificCalculatorViewController" customModule="csc371_FinalProject_AADW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Grx-Ot-aGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="845-lc-Yjn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFJ-cD-fhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="-603"/>
+        </scene>
     </scenes>
 </document>
