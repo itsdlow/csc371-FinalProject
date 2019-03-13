@@ -8,10 +8,9 @@
 
 import UIKit
 
-class CalculatorsTableViewController: UITableViewController {
+class CCTableViewController: UITableViewController {
     
-    let Calculators : [String] = ["Basic Calculator", "Scientific Calculator"]
-    let calcIDS : [String] = ["basic"]
+
     let Conversions : [String]=[]
 
     override func viewDidLoad() {
@@ -28,16 +27,16 @@ class CalculatorsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         switch section {
         case 0:
-            return Calculators.count
+            return calculatorsList.count
         case 1:
-            return Conversions.count
+            return conversionsList.count
         default:
             break
         }
@@ -46,18 +45,24 @@ class CalculatorsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let calc = 
-        let cell = tableView.dequeueReusableCell(withIdentifier: calcIDS[indexPath.row], for: indexPath)
-
-        // Configure the cell...
-        switch(indexPath.section){
+        var c : cc?
+        //let cellID:String
+        
+        switch indexPath.section {
         case 0:
-            cell.textLabel?.text=Calculators[indexPath.row]
+            c = calculatorsList[indexPath.row]
         case 1:
-            cell.textLabel?.text="N/A"
+            c = conversionsList[indexPath.row]
         default:
             break
         }
+        guard let cInfo = c else{return UITableViewCell()}
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cInfo.id, for: indexPath)
+        // Configure the cell...
+        
+        cell.textLabel?.text = cInfo.name
+        
         return cell
     }
  

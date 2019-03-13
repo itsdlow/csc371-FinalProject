@@ -12,9 +12,9 @@
 		8A02D665222DC7B200D68A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A02D663222DC7B200D68A9B /* Main.storyboard */; };
 		8A02D667222DC7B300D68A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A02D666222DC7B300D68A9B /* Assets.xcassets */; };
 		8A02D66A222DC7B300D68A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A02D668222DC7B300D68A9B /* LaunchScreen.storyboard */; };
-		8A02D672222DCB6300D68A9B /* CalculatorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02D671222DCB6300D68A9B /* CalculatorsTableViewController.swift */; };
+		8A02D672222DCB6300D68A9B /* CCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02D671222DCB6300D68A9B /* CCTableViewController.swift */; };
 		8A5A633822309B200082D50B /* BasicCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */; };
-		8AF6D34C2238791400573704 /* calculators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6D34B2238791400573704 /* calculators.swift */; };
+		8AF6D3502238836000573704 /* cc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6D34F2238836000573704 /* cc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		8A02D666222DC7B300D68A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A02D669222DC7B300D68A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A02D66B222DC7B300D68A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A02D671222DCB6300D68A9B /* CalculatorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorsTableViewController.swift; sourceTree = "<group>"; };
+		8A02D671222DCB6300D68A9B /* CCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTableViewController.swift; sourceTree = "<group>"; };
 		8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorViewController.swift; sourceTree = "<group>"; };
-		8AF6D34B2238791400573704 /* calculators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculators.swift; sourceTree = "<group>"; };
+		8AF6D34F2238836000573704 /* cc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 				8A02D663222DC7B200D68A9B /* Main.storyboard */,
 				4B950D9E22387CB9005BBF71 /* ScientificCalculatorViewController.swift */,
 				8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */,
-				8A02D671222DCB6300D68A9B /* CalculatorsTableViewController.swift */,
-				8AF6D34B2238791400573704 /* calculators.swift */,
+				8A02D671222DCB6300D68A9B /* CCTableViewController.swift */,
+				8AF6D34F2238836000573704 /* cc.swift */,
 				8A02D666222DC7B300D68A9B /* Assets.xcassets */,
 				8A02D668222DC7B300D68A9B /* LaunchScreen.storyboard */,
 				8A02D66B222DC7B300D68A9B /* Info.plist */,
@@ -145,10 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5A633822309B200082D50B /* BasicCalculatorViewController.swift in Sources */,
+				8AF6D3502238836000573704 /* cc.swift in Sources */,
 				4B950D9F22387CB9005BBF71 /* ScientificCalculatorViewController.swift in Sources */,
-				8AF6D34C2238791400573704 /* calculators.swift in Sources */,
 				8A02D65E222DC7B200D68A9B /* AppDelegate.swift in Sources */,
-				8A02D672222DCB6300D68A9B /* CalculatorsTableViewController.swift in Sources */,
+				8A02D672222DCB6300D68A9B /* CCTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
