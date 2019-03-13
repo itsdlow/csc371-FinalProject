@@ -11,8 +11,16 @@ import Foundation
 
 class calculator {
     
+    enum `Type` {
+        case basic = "basic"
+        case scientific = "scientific"
+        case hex = "hex"
+    }
+    //var type : = <#value#>
     
     
     
 }
 
+
+//masterList = []

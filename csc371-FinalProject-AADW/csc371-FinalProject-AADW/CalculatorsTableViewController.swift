@@ -46,6 +46,7 @@ class CalculatorsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let calc = 
         let cell = tableView.dequeueReusableCell(withIdentifier: calcIDS[indexPath.row], for: indexPath)
 
         // Configure the cell...
