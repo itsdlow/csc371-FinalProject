@@ -38,6 +38,12 @@ class BasicCalculatorViewController: UIViewController {
     }
 
     @IBAction func clear(_ sender: UIButton) {
+        result = 0
+        resultLabel.text = ""
+        left = nil
+        right = nil
+        
+        
     }
 
     //operatioj function, must take care of previous value, stored in resultLabel

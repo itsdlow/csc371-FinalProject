@@ -21,18 +21,19 @@ protocol cc {
     
 }
 
+enum calcIdentifier : String {
+    case basic = "basic"
+    case scientific = "scientific"
+    case hex = "hex"
+}
+
 class calculator : cc{
     var type: sect
     var name:String
     let id:String
     
-    enum cellIdentifier : String {
-        case basic = "basic"
-        case scientific = "scientific"
-        case hex = "hex"
-    }
     
-    required init(name: String, type: sect, id:cellIdentifier) {
+    required init(name: String, type: sect, id:calcIdentifier) {
         self.id = id.rawValue
         self.name = name
         self.type = type
@@ -40,16 +41,18 @@ class calculator : cc{
     
     
 }
-
+enum conversionIdentifier : String{
+    case money = "money"
+    case distance = "distance"
+    case speed = "speed"
+    case temperature = "temp"
+}
 class conversion : cc{
     var type: sect
     var name:String
     let id:String
     
-    enum cellIdentifier : String{
-        case usd
-    }
-    required init(name: String, type: sect, id:cellIdentifier) {
+    required init(name: String, type: sect, id:conversionIdentifier) {
         self.id = id.rawValue
         self.name = name
         self.type = type
@@ -66,5 +69,8 @@ let calculatorsList = [
 ]
 
 let conversionsList = [
-    conversion(name: "UsDollars", type: .conversion, id: .usd)
+    conversion(name: "Money Conversions", type: .conversion, id: .money),
+    conversion(name: "Distance Conversions", type: .conversion, id: .distance),
+    conversion(name: "Speed Conversions", type: .conversion, id: .speed),
+    conversion(name: "Temperature Conversions", type: .conversion, id: .temperature)
 ]

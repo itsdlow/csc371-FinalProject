@@ -27,7 +27,7 @@ class CCTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,6 +66,10 @@ class CCTableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return (section==0) ? "Calculators" : "Conversions"
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Show detail segue to calculator
     }
@@ -104,14 +108,32 @@ class CCTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        guard let conversionViewController = segue.destination as? ConversionsViewController else {return}
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {return}
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0:
+            conversionViewController.cType = .money
+        case 1:
+            conversionViewController.cType = .distance
+            print("Distance")
+        case 2:
+            conversionViewController.cType = .speed
+        case 3:
+            conversionViewController.cType = .temperature
+        default:
+            return
+        }
     }
-    */
+ 
 
 }

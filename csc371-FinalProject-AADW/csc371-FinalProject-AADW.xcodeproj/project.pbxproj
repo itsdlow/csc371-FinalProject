@@ -14,6 +14,7 @@
 		8A02D66A222DC7B300D68A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A02D668222DC7B300D68A9B /* LaunchScreen.storyboard */; };
 		8A02D672222DCB6300D68A9B /* CCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02D671222DCB6300D68A9B /* CCTableViewController.swift */; };
 		8A5A633822309B200082D50B /* BasicCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */; };
+		8ABC7D61223AF97C001F06BF /* ConversionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC7D60223AF97C001F06BF /* ConversionsViewController.swift */; };
 		8AF6D3502238836000573704 /* cc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6D34F2238836000573704 /* cc.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		8A02D66B222DC7B300D68A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A02D671222DCB6300D68A9B /* CCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTableViewController.swift; sourceTree = "<group>"; };
 		8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorViewController.swift; sourceTree = "<group>"; };
+		8ABC7D60223AF97C001F06BF /* ConversionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionsViewController.swift; sourceTree = "<group>"; };
 		8AF6D34F2238836000573704 /* cc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				8A02D65D222DC7B200D68A9B /* AppDelegate.swift */,
 				8A02D663222DC7B200D68A9B /* Main.storyboard */,
+				8ABC7D60223AF97C001F06BF /* ConversionsViewController.swift */,
 				4B950D9E22387CB9005BBF71 /* ScientificCalculatorViewController.swift */,
 				8A5A633722309B200082D50B /* BasicCalculatorViewController.swift */,
 				8A02D671222DCB6300D68A9B /* CCTableViewController.swift */,
@@ -146,6 +149,7 @@
 			files = (
 				8A5A633822309B200082D50B /* BasicCalculatorViewController.swift in Sources */,
 				8AF6D3502238836000573704 /* cc.swift in Sources */,
+				8ABC7D61223AF97C001F06BF /* ConversionsViewController.swift in Sources */,
 				4B950D9F22387CB9005BBF71 /* ScientificCalculatorViewController.swift in Sources */,
 				8A02D65E222DC7B200D68A9B /* AppDelegate.swift in Sources */,
 				8A02D672222DCB6300D68A9B /* CCTableViewController.swift in Sources */,
