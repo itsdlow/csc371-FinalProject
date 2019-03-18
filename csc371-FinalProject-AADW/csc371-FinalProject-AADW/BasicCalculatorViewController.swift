@@ -39,7 +39,7 @@ class BasicCalculatorViewController: UIViewController {
 
     @IBAction func clear(_ sender: UIButton) {
         result = 0
-        resultLabel.text = ""
+        resultLabel.text = "0"
         left = nil
         right = nil
         
@@ -49,6 +49,10 @@ class BasicCalculatorViewController: UIViewController {
     //operatioj function, must take care of previous value, stored in resultLabel
     @IBAction func op(_ sender: UIButton) {
         //store resultLabel num into equation
+        guard let str = resultLabel.text else {return}
+        guard let num = Double(str) else{return}
+        left = num
+        
         guard let label = sender.titleLabel?.text else {return}
         switch label {
         case "+":
@@ -69,7 +73,12 @@ class BasicCalculatorViewController: UIViewController {
     
     @IBAction func number(_ sender: UIButton) {
         if let numStr = sender.titleLabel?.text{
-            resultLabel.text?.append(numStr)
+            switch(resultLabel.text!){
+            case "0":
+               resultLabel.text? = numStr
+            default:
+                resultLabel.text?.append(numStr)
+            }
             //equation.append(num)
         }
     }
@@ -84,12 +93,19 @@ class BasicCalculatorViewController: UIViewController {
                     result = add(pre: l, cur: r)
                 case .subtraction:
                     result = sub(pre: l, cur: r)
+                case .multiplication:
+                    result = multiplication(pre: l, cur: r)
+                case .division:
+                    result = division(pre: l, cur: r)
+                /*
                 default:
                     break
+                */
                 }
             }
 
         }
+        resultLabel.text = String(result)
     }
     
 
@@ -101,6 +117,12 @@ class BasicCalculatorViewController: UIViewController {
     }
     func sub (pre:Double, cur:Double) -> Double {
         return pre-cur
+    }
+    func multiplication(pre:Double, cur:Double) -> Double {
+        return pre*cur
+    }
+    func division(pre:Double, cur:Double) -> Double {
+        return pre/cur
     }
     /*
     // MARK: - Navigation

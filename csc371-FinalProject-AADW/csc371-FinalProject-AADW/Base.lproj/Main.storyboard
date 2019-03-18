@@ -206,18 +206,26 @@
                                         <rect key="frame" x="0.0" y="42.5" width="120" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se7-Ba-lU2">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="+"/>
                                                 <connections>
                                                     <action selector="op:" destination="svq-Zt-6xL" eventType="touchUpInside" id="9Gr-mS-KEn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-4e-awa">
-                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="30" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="-"/>
                                                 <connections>
                                                     <action selector="op:" destination="svq-Zt-6xL" eventType="touchUpInside" id="ak6-cQ-pVi"/>
                                                 </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3M-Fc-5YO">
+                                                <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="*"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uN-5D-J7f">
+                                                <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="/"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -225,31 +233,24 @@
                                         <rect key="frame" x="0.0" y="94.5" width="120" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP4-gs-yJT">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
                                                 <state key="normal" title="1"/>
                                                 <connections>
                                                     <action selector="number:" destination="svq-Zt-6xL" eventType="touchUpInside" id="MPx-RW-pDw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ce3-1p-OLC">
-                                                <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="40" y="0.0" width="40" height="30"/>
                                                 <state key="normal" title="2"/>
                                                 <connections>
                                                     <action selector="number:" destination="svq-Zt-6xL" eventType="touchUpInside" id="tfG-cV-ISX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-jB-aud">
-                                                <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="80" y="0.0" width="40" height="30"/>
                                                 <state key="normal" title="3"/>
                                                 <connections>
                                                     <action selector="number:" destination="svq-Zt-6xL" eventType="touchUpInside" id="r1m-22-aiG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-rN-dlI">
-                                                <rect key="frame" x="90" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="C"/>
-                                                <connections>
-                                                    <action selector="clear:" destination="svq-Zt-6xL" eventType="touchUpInside" id="Uxp-Ui-7AA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -310,17 +311,24 @@
                                         <rect key="frame" x="0.0" y="250.5" width="120" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-ne-00e">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
                                                 <state key="normal" title="="/>
                                                 <connections>
                                                     <action selector="equals:" destination="svq-Zt-6xL" eventType="touchUpInside" id="M9r-c5-aRz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMv-ms-S4a">
-                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="40" y="0.0" width="40" height="30"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="number:" destination="svq-Zt-6xL" eventType="touchUpInside" id="eyS-YI-hIO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-rN-dlI">
+                                                <rect key="frame" x="80" y="0.0" width="40" height="30"/>
+                                                <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="clear:" destination="svq-Zt-6xL" eventType="touchUpInside" id="Uxp-Ui-7AA"/>
                                                 </connections>
                                             </button>
                                         </subviews>

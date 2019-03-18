@@ -122,14 +122,14 @@ class CCTableViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            conversionViewController.cType = .money
+            
+            conversionViewController.cType = .money//conversionArray = moneyConversions
         case 1:
-            conversionViewController.cType = .distance
-            print("Distance")
+            conversionViewController.cType = .distance//.conversionArray = distanceConversions
         case 2:
-            conversionViewController.cType = .speed
+            conversionViewController.cType = .speed//.conversionArray = speedConversions
         case 3:
-            conversionViewController.cType = .temperature
+            conversionViewController.cType = .temperature//.conversionArray = tempConversions
         default:
             return
         }
