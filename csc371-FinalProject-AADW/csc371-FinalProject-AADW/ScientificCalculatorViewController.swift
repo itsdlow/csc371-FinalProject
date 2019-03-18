@@ -14,10 +14,14 @@ class ScientificCalculatorViewController: UIViewController {
     
     
     @IBAction func textButtonPressed(_ sender: UIButton) {
-        calcLabel.text! = "\(calcLabel.text!), \(sender.titleLabel!)"
+        calcLabel.text! = "\(calcLabel.text!)\(sender.titleLabel!.text ?? "" )"
     }
     
     @IBAction func actionButtonPressed(_ sender: UIButton) {
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
