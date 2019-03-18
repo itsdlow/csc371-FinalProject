@@ -10,9 +10,17 @@ import UIKit
 
 class ScientificCalculatorViewController: UIViewController {
 
+    @IBOutlet weak var calcLabel: UILabel!
+    
+    
+    @IBAction func textButtonPressed(_ sender: UIButton) {
+        calcLabel.text! = "\(calcLabel.text!), \(sender.titleLabel!)"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        calcLabel.text = ""
         // Do any additional setup after loading the view.
     }
     
