@@ -42,9 +42,10 @@ class BasicCalculatorViewController: UIViewController {
     @IBAction func clear(_ sender: UIButton) {
         result = 0
         resultLabel.text = "0"
-        left = nil
+        o = nil
         right = nil
         resetlabel = true
+        newEq = true
         
     }
     var resetlabel = true
@@ -53,7 +54,7 @@ class BasicCalculatorViewController: UIViewController {
         //store resultLabel num into equation
         guard let str = resultLabel.text else {return}
         guard let num = Double(str) else{return}
-        left = num
+        result = num
         
         guard let label = sender.titleLabel?.text else {return}
         switch label {
@@ -69,6 +70,7 @@ class BasicCalculatorViewController: UIViewController {
             break
         }
         resetlabel=true
+        newEq = true
         //resultLabel.text = ""
     }
     
@@ -83,32 +85,30 @@ class BasicCalculatorViewController: UIViewController {
             }
         }
     }
-    
+    var newEq : Bool = true
     @IBAction func equals(_ sender: UIButton) {
-        guard let l = left else {return}
+        //guard let l = left else {return}
         if let r = Double(resultLabel.text!){
-            right=r
+            //only change the r-value if  a new operations is beginning.
+            if newEq{
+                right=r
+            }
+        }
+            guard let rval = right else {return}
             if let operation = o{
                 switch operation{
                 case .addition:
-                    result = add(pre: l, cur: r)
+                    result = add(pre: result, cur: rval)
                 case .subtraction:
-                    result = sub(pre: l, cur: r)
+                    result = sub(pre: result, cur: rval)
                 case .multiplication:
-                    result = multiplication(pre: l, cur: r)
+                    result = multiplication(pre: result, cur: rval)
                 case .division:
-                    result = division(pre: l, cur: r)
-                /*
-                default:
-                    break
-                */
+                    result = division(pre: result, cur: rval)
                 }
             }
-
-        }
-        left = nil
-        //right = nil
-        resultLabel.text = String(format: "%d", (intCheck(d: result)) ? Int(result): result)// result)
+        newEq = false
+        resultLabel.text = String(format: "%d", (intCheck(d: result)) ? Int(result): result)
     }
     
     func intCheck(d:Double) -> Bool {
