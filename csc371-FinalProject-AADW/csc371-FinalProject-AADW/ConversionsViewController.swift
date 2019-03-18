@@ -29,7 +29,14 @@ let tempConversions = [
 ]
 enum moneyTypes : Int, typeEnum{
     func get(val: Double) -> String {
-        <#code#>
+        switch self {
+        case .Euro:
+            return "Euros"
+        case .USD:
+            return "USD"
+        case .Peso:
+            return "Pesos"
+        }
     }
     
     case USD
@@ -38,12 +45,17 @@ enum moneyTypes : Int, typeEnum{
 }
 
 enum speedTypes : Int, typeEnum{
-    func get(val: Double) -> String {
-        <#code#>
-    }
-    
     case MPH
     case KPH
+    
+    func get(val: Double) -> String {
+        switch self {
+        case .KPH:
+            return "KPH"
+        case .MPH:
+            return "MPH"
+        }
+    }
 }
 
 enum tempTypes : Int, typeEnum {
@@ -99,6 +111,8 @@ enum distanceTypes : Int, typeEnum{
             }
     }
 }
+ 
+
 class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
 
@@ -110,7 +124,7 @@ class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var cType:conversionIdentifier?
     //conversion array*/ type enum set by CCTable during segue
     var cEnum:typeEnum?
-    //var conversionArray:[String]?
+    var conversionArray:[String]?
     var fromValue = 0
     var toValue = 0
     
@@ -119,7 +133,7 @@ class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBAction func convert(_ sender: UIButton) {
         if let ar = conversionArray {
             //string conversion type.
-            let fromUnit = //ar[picker.selectedRow(inComponent: 0)]
+            let fromUnit = ar[picker.selectedRow(inComponent: 0)]
             let toUnit = ar[picker.selectedRow(inComponent: 1)]
             
             //call conversion function for appropriate cType (conversion type)
@@ -156,7 +170,7 @@ class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        cType?.rawValue
+        //cType?.rawValue
         if let ar = conversionArray{
             return ar[row]
         }
@@ -175,12 +189,11 @@ class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        /*
         if let type = cType{
             switch type {
             case .money:
-                cEnum = moneyTypes
-                //conversionArray = moneyConversions
+                cEnum = (moneyTypes as? typeEnum)                //conversionArray = moneyConversions
             case .distance:
                 cEnum = distanceTypes
                 //conversionArray = distanceConversions
@@ -191,22 +204,16 @@ class ConversionsViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 cEnum = tempTypes
                 //conversionArray = tempConversions
             }
-        }
+        }*/
  
         
-
     }
- 
-    /* conversion functions ********************************/
     
     func moneyConversion(from fU:String, to tU:String){
+        /*
         switch tU {
-        case "":
-            <#code#>
-        default:
-            <#code#>
-        }
-        
+         case .USD:
+         */
     }
     func distanceConversion(from fU:String, to tU:String){
         
