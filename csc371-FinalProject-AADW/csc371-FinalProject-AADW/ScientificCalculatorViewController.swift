@@ -17,6 +17,8 @@ class ScientificCalculatorViewController: UIViewController {
         calcLabel.text! = "\(calcLabel.text!), \(sender.titleLabel!)"
     }
     
+    @IBAction func actionButtonPressed(_ sender: UIButton) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
