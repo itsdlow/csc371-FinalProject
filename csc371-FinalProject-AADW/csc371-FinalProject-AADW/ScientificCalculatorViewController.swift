@@ -14,7 +14,8 @@ class ScientificCalculatorViewController: UIViewController {
     
     
     @IBAction func textButtonPressed(_ sender: UIButton) {
-        calcLabel.text! = "\(calcLabel.text!), \(sender.titleLabel!)"
+        //if let
+        //calcLabel.text! = "\(calcLabel.text!), \(sender.titleLabel!)"
     }
     
     @IBAction func actionButtonPressed(_ sender: UIButton) {
