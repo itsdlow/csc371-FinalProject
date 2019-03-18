@@ -222,10 +222,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3M-Fc-5YO">
                                                 <rect key="frame" x="60" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="*"/>
+                                                <connections>
+                                                    <action selector="op:" destination="svq-Zt-6xL" eventType="touchUpInside" id="UBn-RU-FUW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uN-5D-J7f">
                                                 <rect key="frame" x="90" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="/"/>
+                                                <connections>
+                                                    <action selector="op:" destination="svq-Zt-6xL" eventType="touchUpInside" id="vYY-3p-yYI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -346,7 +352,9 @@
                     <connections>
                         <outlet property="addBtn" destination="Se7-Ba-lU2" id="LfD-xf-NMF"/>
                         <outlet property="clearBtn" destination="YIe-rN-dlI" id="lWf-Vh-449"/>
+                        <outlet property="divBtn" destination="4uN-5D-J7f" id="YKf-YX-3ZT"/>
                         <outlet property="equalsBtn" destination="Cot-ne-00e" id="p6H-VM-smR"/>
+                        <outlet property="multiBtn" destination="z3M-Fc-5YO" id="0aq-lP-uMr"/>
                         <outlet property="resultLabel" destination="nPa-OI-m2u" id="Me4-8Y-Xin"/>
                         <outlet property="subBtn" destination="Xbz-4e-awa" id="SGI-mk-n9r"/>
                         <outletCollection property="numBtns" destination="pP4-gs-yJT" collectionClass="NSMutableArray" id="3Up-kS-2xI"/>

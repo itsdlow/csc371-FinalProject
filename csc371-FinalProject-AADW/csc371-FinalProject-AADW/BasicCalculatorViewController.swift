@@ -28,6 +28,8 @@ class BasicCalculatorViewController: UIViewController {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var subBtn: UIButton!
     @IBOutlet weak var equalsBtn: UIButton!
+    @IBOutlet weak var multiBtn: UIButton!
+    @IBOutlet weak var divBtn: UIButton!
     
     @IBOutlet var numBtns: [UIButton]!
     
@@ -42,10 +44,10 @@ class BasicCalculatorViewController: UIViewController {
         resultLabel.text = "0"
         left = nil
         right = nil
-        
+        resetlabel = true
         
     }
-
+    var resetlabel = true
     //operatioj function, must take care of previous value, stored in resultLabel
     @IBAction func op(_ sender: UIButton) {
         //store resultLabel num into equation
@@ -66,20 +68,19 @@ class BasicCalculatorViewController: UIViewController {
         default:
             break
         }
-        
-        
+        resetlabel=true
+        //resultLabel.text = ""
     }
-
     
     @IBAction func number(_ sender: UIButton) {
         if let numStr = sender.titleLabel?.text{
-            switch(resultLabel.text!){
-            case "0":
-               resultLabel.text? = numStr
+            switch(resetlabel){
+            case true:
+                resultLabel.text? = numStr
+                resetlabel=false
             default:
                 resultLabel.text?.append(numStr)
             }
-            //equation.append(num)
         }
     }
     
@@ -105,13 +106,20 @@ class BasicCalculatorViewController: UIViewController {
             }
 
         }
-        resultLabel.text = String(result)
+        left = nil
+        //right = nil
+        resultLabel.text = String(format: "%d", (intCheck(d: result)) ? Int(result): result)// result)
     }
     
-
-    
-    
-    
+    func intCheck(d:Double) -> Bool {
+        //let disp:Double = floor(d)
+        return (d-floor(d)==0) ? true : false
+    }
+    /*
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    */
     func add (pre:Double, cur:Double) -> Double {
         return pre+cur
     }
