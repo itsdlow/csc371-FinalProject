@@ -452,7 +452,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="hIW-1n-AGG" userLabel="picker">
-                                <rect key="frame" x="27.5" y="199" width="320" height="216"/>
+                                <rect key="frame" x="27.5" y="149" width="320" height="216"/>
                                 <color key="backgroundColor" red="0.73105569948186533" green="0.29666212364320699" blue="0.12612053554871525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="P0h-d8-PYE" id="C0p-wc-G88"/>
@@ -460,39 +460,29 @@
                                 </connections>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="th6-Pe-ByQ">
-                                <rect key="frame" x="27.5" y="164" width="320" height="30"/>
+                                <rect key="frame" x="27.5" y="114" width="320" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsW-QC-FcT" userLabel="toField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-Jx-1T0" userLabel="fromField">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-Jx-1T0" userLabel="fromField">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrT-j8-5yA">
                                         <rect key="frame" x="175" y="0.0" width="145" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                    </textField>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NVz-8c-PJj"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cre-FC-3fu">
-                                <rect key="frame" x="20" y="84" width="335" height="60"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Uj9-5P-avc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-wT-KkR">
-                                <rect key="frame" x="77.5" y="445" width="220" height="60"/>
+                                <rect key="frame" x="77.5" y="395" width="220" height="60"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KBr-Nn-S27"/>
@@ -511,14 +501,11 @@
                             <constraint firstItem="wmq-wT-KkR" firstAttribute="centerX" secondItem="1vt-FH-IRV" secondAttribute="centerX" id="E7s-pH-tO3"/>
                             <constraint firstItem="th6-Pe-ByQ" firstAttribute="trailing" secondItem="hIW-1n-AGG" secondAttribute="trailing" id="HUt-gS-rsp"/>
                             <constraint firstItem="hIW-1n-AGG" firstAttribute="centerX" secondItem="1vt-FH-IRV" secondAttribute="centerX" id="Hf3-Ju-u36"/>
-                            <constraint firstItem="KHm-D9-Xlb" firstAttribute="trailing" secondItem="Cre-FC-3fu" secondAttribute="trailing" constant="20" id="gjt-wT-owW"/>
-                            <constraint firstItem="Cre-FC-3fu" firstAttribute="leading" secondItem="KHm-D9-Xlb" secondAttribute="leading" constant="20" id="jne-eW-rYj"/>
+                            <constraint firstItem="th6-Pe-ByQ" firstAttribute="top" secondItem="KHm-D9-Xlb" secondAttribute="top" constant="50" id="J92-4H-SBP"/>
                             <constraint firstItem="wmq-wT-KkR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hIW-1n-AGG" secondAttribute="leading" constant="50" id="jx2-19-23L"/>
                             <constraint firstItem="wmq-wT-KkR" firstAttribute="top" secondItem="hIW-1n-AGG" secondAttribute="bottom" constant="30" id="nFF-9B-gjb"/>
-                            <constraint firstItem="Cre-FC-3fu" firstAttribute="top" secondItem="KHm-D9-Xlb" secondAttribute="top" constant="20" id="rTA-Do-7mn"/>
                             <constraint firstItem="th6-Pe-ByQ" firstAttribute="centerX" secondItem="1vt-FH-IRV" secondAttribute="centerX" id="tD9-yM-f4c"/>
                             <constraint firstItem="th6-Pe-ByQ" firstAttribute="leading" secondItem="hIW-1n-AGG" secondAttribute="leading" id="ujU-8N-0u8"/>
-                            <constraint firstItem="th6-Pe-ByQ" firstAttribute="top" secondItem="Cre-FC-3fu" secondAttribute="bottom" constant="20" id="vDy-r3-qtS"/>
                             <constraint firstItem="hIW-1n-AGG" firstAttribute="top" secondItem="th6-Pe-ByQ" secondAttribute="bottom" constant="5" id="vht-kD-99q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KHm-D9-Xlb"/>
@@ -530,7 +517,7 @@
                         <outlet property="convertButton" destination="wmq-wT-KkR" id="fpl-N7-kPc"/>
                         <outlet property="fromField" destination="OOf-Jx-1T0" id="GM7-0C-dVq"/>
                         <outlet property="picker" destination="hIW-1n-AGG" id="NCz-0D-9P5"/>
-                        <outlet property="toField" destination="NsW-QC-FcT" id="59g-B1-Pth"/>
+                        <outlet property="toLabel" destination="yrT-j8-5yA" id="vFj-fn-mo9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwy-JE-hjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
