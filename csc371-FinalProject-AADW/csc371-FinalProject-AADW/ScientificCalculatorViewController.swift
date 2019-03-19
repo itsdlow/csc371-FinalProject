@@ -25,22 +25,27 @@ class ScientificCalculatorViewController: UIViewController {
     @IBAction func actionButtonPressed(_ sender: UIButton) {
         
         guard let txtAction = sender.titleLabel?.text else {return}
-        switch txtAction {
-        case "=":
-            reduceEqual()
-        case "n!":
-            nFactorial()
-        case "√":
-            squareRoot()
-        case "⌫":
-            backSpace()
-        case "C":
-            clearLabel()
-        case "CE":
-            clearLabel()
-        default:
-            break
+        if let l = calcLabel.text{
+            switch txtAction {
+            case "=":
+                reduceEqual()
+            case "n!":
+                guard let n = Int(l) else{return}
+                calcLabel.text = String(format: "%d", nFactorial(n: n))
+            case "√":
+                squareRoot()
+            case "⌫":
+                backSpace()
+            case "C":
+                clearLabel()
+            case "CE":
+                clearLabel()
+            default:
+                break
+            }
         }
+        //guard let n = Double(calcLabel?.text) else {return}
+        
         
     
         
@@ -156,8 +161,17 @@ class ScientificCalculatorViewController: UIViewController {
         }
     }
     
-    func nFactorial(){
-        
+    func nFactorial(n:Int)-> Int{
+        func aux (res:Int,x:Int) -> Int{
+            print(String(format: "%d\n",x))
+            switch x {
+            case 1:
+                return res
+            default:
+                return aux(res: res*n, x: x-1)
+            }
+        }
+        return aux(res: 1,x: n)
     }
     func squareRoot(){
         
