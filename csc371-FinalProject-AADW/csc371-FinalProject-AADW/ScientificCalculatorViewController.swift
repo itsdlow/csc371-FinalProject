@@ -13,11 +13,13 @@ import UIKit
 class ScientificCalculatorViewController: UIViewController {
 
     @IBOutlet weak var calcLabel: UILabel!
-   
+
     
-    
-    @IBAction func textButtonPressed(_ sender: UIButton) {
-        calcLabel.text! = "\(calcLabel.text!)\(sender.titleLabel!.text ?? "" )"
+    @IBAction func textButtonPressed(_ sender: UIButton){
+        if let btnLabel = sender.titleLabel?.text{
+            calcLabel.text?.append(btnLabel)
+        }
+        //calcLabel.text! = "\(calcLabel.text!)\(sender.titleLabel!.text ?? "" )"
     }
     
     @IBAction func actionButtonPressed(_ sender: UIButton) {
