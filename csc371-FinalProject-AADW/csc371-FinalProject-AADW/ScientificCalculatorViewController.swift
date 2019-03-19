@@ -11,7 +11,14 @@ import UIKit
 class ScientificCalculatorViewController: UIViewController {
 
     @IBOutlet weak var calcLabel: UILabel!
-    
+   
+    enum action : String{
+        case addition = "+"
+        case subtraction = "-"
+        case multiplication = "*"
+        case division = "/"
+    }
+    var actions : [action]?
     
     @IBAction func textButtonPressed(_ sender: UIButton) {
         calcLabel.text! = "\(calcLabel.text!)\(sender.titleLabel!.text ?? "" )"
